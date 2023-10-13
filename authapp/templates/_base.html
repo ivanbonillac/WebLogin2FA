@@ -23,6 +23,15 @@
             <!--Personaliza de manera horizontalmente apariencia color, ancho, padding y borde-->
             <div class="row bg-light px-0 py-4 border rounded w-50">
                 <div class="col">
+                {% if messages %}
+                    {% for messages in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ messages }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
                 {% block bodycontent %}
                 {% endblock %}    
                 </div>
