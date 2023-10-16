@@ -1,5 +1,7 @@
 import pyotp
 from datetime import datetime, timedelta
+from django.contrib.auth.models import User
+from django.core.mail import send_mail
 
 def send_otp(request):
     #creating the OTP
@@ -11,4 +13,15 @@ def send_otp(request):
 
     #send otp via terminal
     print(f"Verification code: {otp}")
+
+    send_mail(
+        "Alerta Inicio de Sesion",#Asunto
+        f"Su codigo es: {otp}",#Cuerpo
+        "ivandeveloper28@gmail.com",#email enviante
+        ["ivan.bonilla@utp.ac.pa", "iandresb28@gmail.com"],#email receptor
+    )   
     
+
+
+
+
