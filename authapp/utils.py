@@ -18,7 +18,7 @@ def send_otp(request):
         "Alerta Inicio de Sesion",#Asunto
         f"Su codigo es: {otp}",#Cuerpo
         "ivandeveloper28@gmail.com",#email enviante
-        ["ivan.bonilla@utp.ac.pa", "iandresb28@gmail.com"],#email receptor
+        ["ivan.bonilla@utp.ac.pa", "iandresb28@icloud.com"],#email receptor
     )   
     
 
